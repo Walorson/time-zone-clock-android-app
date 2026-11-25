@@ -1,5 +1,6 @@
 package com.example.time_zone_clock
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,6 +11,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.time_zone_clock.ui.theme.TimezoneclockTheme
 
@@ -19,12 +21,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TimezoneclockTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Time Zone Clock App",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                val context = LocalContext.current
+
+                ActivityButton(
+                    text = "Pokaż Czas",
+                    onClick = {
+                        val intent = Intent(context, TimeActivity::class.java)
+                        context.startActivity(intent)
+                    }
+                )
             }
         }
     }

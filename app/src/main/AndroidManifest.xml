@@ -23,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TimeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_time"
+            android:theme="@style/Theme.Timezoneclock"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
