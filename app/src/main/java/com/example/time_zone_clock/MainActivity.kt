@@ -51,12 +51,11 @@ class MainActivity : ComponentActivity() {
                 // Lista dostępnych miast
                 val cities = listOf(
                     "Warsaw" to "Poland",
-                    "Sydney" to "Australia",
                     "London" to "United Kingdom",
-                    "Tokyo" to "Japan",
                     "New York" to "United States",
                     "Los Angeles" to "United States",
-                    "Paris" to "France",
+                    "Lisbon" to "Portugal",
+                    "Sydney" to "Australia",
                     "Tokyo" to "Japan",
                 )
 
